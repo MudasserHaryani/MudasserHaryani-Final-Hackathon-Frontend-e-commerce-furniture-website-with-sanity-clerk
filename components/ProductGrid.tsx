@@ -16,7 +16,7 @@ function ProductGrid({ products }: { products: Product[] }) {
        className="flex justify-center"
        
        >
-        <ProductThumb key={product._id} product={product} />;
+        <ProductThumb key={product._id} product={product} />
 
        </motion.div>
         </AnimatePresence>
