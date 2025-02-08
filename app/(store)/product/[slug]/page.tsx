@@ -5,6 +5,9 @@ import Image from "next/image";
 import { imageUrl } from "@/lib/imageUrl";
 import { PortableText } from "next-sanity";
 import AddToBasketButton from "@/components/AddToBasketButton";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { TrolleyIcon } from "@sanity/icons";
 // import AddToBasketButton from "@/components/AddToBasketButton";
 
 export const dynamic = "force-static";
@@ -58,10 +61,14 @@ async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
               </blockquote>
             </div>
           </div>
-          <div className="mt-6">
+          <div className="mt-6 flex justify-center gap-6">
            
             <AddToBasketButton product={product} disabled={isOutOfStock} />
-            {/* <Button>Add to Basket</Button> */}
+            
+            <button>
+              <Link href="/basket"
+            className="flex-1 relative flex justify-center sm:justify-start sm:flex-none items-center space-x-2 hover:scale-110 text-white font-bold p-1 rounded-full bg-slate-600"
+          ><TrolleyIcon className="w-6 h-6"/></Link></button>
           </div>
         </div>
       </div>

@@ -5,6 +5,8 @@ import Link from "next/link";
 import Form from "next/form";
 import { PackageIcon, TrolleyIcon } from "@sanity/icons";
 import useBasketStore from "@/app/(store)/store";
+import Image from "next/image";
+import { ShoppingBagIcon } from "lucide-react";
 function Header() {
   const { user } = useUser();
   
@@ -29,13 +31,13 @@ const createClerkPassKey = async () => {
           className="
           text-2xl 
           font-bold 
-          text-blue-500 
+          text-black 
           hover:opacity-50 
           cursor-pointer 
           mx-auto 
           sm:mx-0"
         >
-          Haryani Shop
+         <Image src={"/logo/logo.png"} width={100} height={100} alt="logo"/>
         </Link>
 
         <Form
@@ -69,9 +71,22 @@ const createClerkPassKey = async () => {
         </Form>
 
         <div className="flex items-center space-x-4 mt-4 sm:mt-0 flex-1 sm:flex-none">
+        <Link
+            href="/shop"
+            className="flex-1 relative flex justify-center sm:justify-start sm:flex-none items-center space-x-2 bg-slate-500 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded"
+          >
+            <ShoppingBagIcon className="w-6 h-6"/>
+            {/* Spam item count once global state is implemented */}
+
+            
+            <span>Shop</span>
+          </Link>
+         
+         
+         
           <Link
             href="/basket"
-            className="flex-1 relative flex justify-center sm:justify-start sm:flex-none items-center space-x-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            className="flex-1 relative flex justify-center sm:justify-start sm:flex-none items-center space-x-2 bg-slate-500 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded"
           >
             <TrolleyIcon className="w-6 h-6"/>
             {/* Spam item count once global state is implemented */}
@@ -87,7 +102,7 @@ const createClerkPassKey = async () => {
             <SignedIn>
               <Link
               href='/orders'
-              className="flex-1 relative flex justify-center sm:justify-start sm:flex-none items-center space-x-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              className="flex-1 relative flex justify-center sm:justify-start sm:flex-none items-center space-x-2 bg-slate-500 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded"
               >
               <PackageIcon className="w-6 h-6" />
               <span>Orders</span>

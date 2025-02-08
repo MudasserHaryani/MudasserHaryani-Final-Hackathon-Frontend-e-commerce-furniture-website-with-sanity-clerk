@@ -7,6 +7,7 @@ import { SanityLive } from "@/sanity/lib/live";
 import { VisualEditing } from "next-sanity"
 import { draftMode } from "next/headers";
 import { DisableDraftMode } from "@/components/DisableDraftMode";
+import Footer from "@/components/Footer";
 
 
 export const metadata: Metadata = {
@@ -33,7 +34,7 @@ export default async function RootLayout({
           <main>
             <Header/>
             {children}
-            
+            <Footer/>
           </main>
           <SanityLive/>
         </body>
