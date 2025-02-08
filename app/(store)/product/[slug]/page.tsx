@@ -5,7 +5,6 @@ import Image from "next/image";
 import { imageUrl } from "@/lib/imageUrl";
 import { PortableText } from "next-sanity";
 import AddToBasketButton from "@/components/AddToBasketButton";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { TrolleyIcon } from "@sanity/icons";
 // import AddToBasketButton from "@/components/AddToBasketButton";
